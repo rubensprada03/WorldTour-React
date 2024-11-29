@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Odor+Mean+Chey&display=swap');
 
 .search-content {
-    background-image: url('../../assets/images/background.png');
+    background-image: url('../../assets/images/lagos.JPG');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh; 
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: start; 
     align-items: center;
-    padding-top: 70px; 
+    padding-top: 11rem; 
 }
 
   .main-content {
