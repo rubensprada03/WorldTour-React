@@ -1,129 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Odor+Mean+Chey&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Odor+Mean+Chey&display=swap");
 
 .search-content {
-    background-image: url('../../assets/images/lagos.JPG');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; 
-    display: flex;
-    flex-direction: column;
-    justify-content: start; 
-    align-items: center;
-    padding-top: 11rem; 
+  background-image: url("../../../public/assets/images/lagos.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-top: 11rem;
 }
 
-  .main-content {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    width: 90%; 
-    max-width: 1200px; 
-    margin: auto;
-    flex-grow: 1; 
-  }
-  
-  .left-content, .right-content {
-    flex: 1; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-  }
-  
-  .left-content {
-    padding-right: 20px; 
-    color: white; 
-  }
-  
-  .right-content {
-    padding-left: 20px; 
-    color: white;
-  }
-  
-  .title-wt {
-    font-size: 6rem;
-    margin-bottom: 1rem; 
-    font-family: "Odor Mean Chey", serif;
-  }
-  
-  .desc-wt {
-    font-size: 1rem;
-  }
-  
-  .header-content {
-    position: fixed; 
-    top: 0;
-    left: 0; 
-    width: 100%; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    color: white; 
-    padding: 20px 20px; 
-    z-index: 1000;
-    margin: 0 auto;
-
-    /* Background degradê */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.01));
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  flex-grow: 1;
 }
 
-  
-  .header-logo {
-    height: 50px;
-  }
-  
-  .header-nav a {
-    color: white;
-    text-decoration: none; 
-    margin-left: 45px; 
-    font-size: 1rem;
-    font-weight: 400;
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Adiciona transição */
-  }
-  
-  .header-nav a:hover {
-    color: #7C8DB0;
-  }
+.left-content,
+.right-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.left-content {
+  padding-right: 20px;
+  color: white;
+}
 
+.right-content {
+  padding-left: 20px;
+  color: white;
+}
 
-  .input-wrapper {
-    position: relative;
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  
-  .icon {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    color: #ccc;
-    font-size: 18px;
-    pointer-events: none;
-  }
-  
-  input[type="text"] {
-    width: 100%;
-    padding: 10px 15px 10px 40px; /* Espaço para o ícone */
-    font-size: 16px;
-    border: 1px solid #ccc;
-    outline: none;
-    border-radius: 5px;
-    transition: border-color 0.3s ease;
-  }
-  
-  input[type="text"]:hover {
-    border-color: #7C8DB0;
-  }
-  
-  input[type="text"]:focus {
-    border-color: #086D7A;
-    box-shadow: 0 0 5px rgba(8, 109, 122, 0.5);
-  }
-  
-  input::placeholder {
-    color: #999;
-    font-style: italic;
-  }
-  
+.title-wt {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+  font-family: "Odor Mean Chey", serif;
+}
+
+.desc-wt {
+  font-size: 1rem;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 15px 10px 40px; /* Espaço para o ícone */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:hover {
+  border-color: #7c8db0;
+}
+
+input[type="text"]:focus {
+  border-color: #086d7a;
+  box-shadow: 0 0 5px rgba(8, 109, 122, 0.5);
+}
+
+input::placeholder {
+  color: #999;
+  font-style: italic;
+}
