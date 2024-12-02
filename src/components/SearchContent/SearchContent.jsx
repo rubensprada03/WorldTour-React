@@ -1,5 +1,5 @@
 import React from "react";
-import "../SearchContent/style.css";
+import "../../Styles/style.css";
 import * as Global from "../../Styles/global";
 import Header from "../header/Header";
 import FlightInputs from "../FlightInputs";
