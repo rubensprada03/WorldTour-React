@@ -19,6 +19,11 @@ export const HeaderWrap = styled.header`
     rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 0.001)
   );
+  background: linear-gradient(
+    to bottom,
+    ${(props) => props.background}b3,
+    ${(props) => props.background}01
+  );
 `;
 
 export const Logo = styled.div`

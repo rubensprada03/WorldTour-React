@@ -51,10 +51,32 @@
   font-size: 1rem;
 }
 
+.flight-inputs {
+  border: 1px solid #19747e;
+  border-radius: 5px;
+  margin-top: 64px;
+  box-shadow: 17px 17px 34px #9ac3d040, -17px -17px 34px #b8e9fa40;
+}
+
 .input-wrapper {
   position: relative;
   width: 100%;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
+  border-radius: 0;
+}
+
+.input-wrapper:nth-child(1),
+.input-wrapper:nth-child(2),
+.input-wrapper:nth-child(3) {
+  border-right: 1px solid #19747e;
+}
+
+.input-first {
+  border-radius: 5px 0 0 5px;
+}
+
+.input-last {
+  border-radius: 0 5px 5px 0;
 }
 
 .icon {
@@ -69,11 +91,12 @@
 
 input[type="text"] {
   width: 100%;
-  padding: 10px 15px 10px 40px; /* Espaço para o ícone */
+  padding: 10px 15px 10px 48px; /* Espaço para o ícone */
   font-size: 16px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
+  border: none;
   outline: none;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   transition: border-color 0.3s ease;
 }
 
