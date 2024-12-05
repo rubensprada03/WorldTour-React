@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Container = styled.main`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const Main = styled.section`
   width: 100%;
   display: flex;
@@ -42,6 +47,8 @@ export const Result = styled.div`
   flex-direction: column;
   align-items: flex-start;
   row-gap: 12px;
+  max-width: 1440px;
+  width: -webkit-fill-available;
 
   h2 {
     padding-left: 24px;

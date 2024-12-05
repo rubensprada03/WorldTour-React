@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from "react";
+import CarouselSelectedImages from "../../components/CarouselSelectedImages";
 import Header from "../../components/header/Header";
 import { getImagesFromPexels } from "../../requests/requests";
 import {
+  Container,
   Form,
   ImagesArea,
   ImgCard,
   Main,
   Result,
-  Carousel,
 } from "../../Styles/global";
 
 const Places = () => {
@@ -36,7 +37,10 @@ const Places = () => {
     if (imagesSelected.some((image) => image.id === item.id)) {
       setImagesSelected(imagesSelected.filter((image) => image.id !== item.id));
     } else {
-      setImagesSelected([...imagesSelected, item]);
+      setImagesSelected([
+        ...imagesSelected,
+        { ...item, index: imagesSelected.length },
+      ]);
     }
   };
 
@@ -45,7 +49,7 @@ const Places = () => {
   };
 
   return (
-    <>
+    <Container>
       <Header background={"#19747E"} />
 
       <Main marginTop={"84px"}>
@@ -110,23 +114,17 @@ const Places = () => {
             <h2>
               Essas são as imagens selecionadas para <span>{keyword}</span>
             </h2>
-            <Carousel className="">
-              {imagesSelected.length > 0 &&
-                imagesSelected.map((item) => (
-                  <ImgCard>
-                    <img
-                      key={item.id}
-                      src={item.src.medium}
-                      width={240}
-                      height={135}
-                    />
-                  </ImgCard>
-                ))}
-            </Carousel>
           </Result>
         )}
+
+        <Result>
+          <CarouselSelectedImages
+            images={imagesSelected}
+            setImages={(value) => setImagesSelected(value)}
+          />
+        </Result>
       </Main>
-    </>
+    </Container>
   );
 };
 
