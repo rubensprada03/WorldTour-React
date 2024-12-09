@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import CarouselSelectedImages from "../../components/CarouselSelectedImages";
-import Header from "../../components/header/Header";
-import { getImagesFromPexels } from "../../requests/requests";
+import CarouselSelectedImages from "../../../components/CarouselSelectedImages";
+import Header from "../../../components/header/Header";
+import { getImagesFromPexels } from "../../../requests/requests";
 import {
   Container,
   Form,
@@ -9,7 +9,8 @@ import {
   ImgCard,
   Main,
   Result,
-} from "../../Styles/global";
+} from "../../../Styles/global";
+import * as C from "./styles";
 
 const Places = () => {
   const useForm = useRef();
@@ -53,30 +54,57 @@ const Places = () => {
       <Header background={"#19747E"} />
 
       <Main marginTop={"84px"}>
+        <C.Title>Adicionar novo ponto turístico</C.Title>
         <Form onSubmit={handleSubmit} ref={useForm}>
-          <label htmlFor="keyword">
-            Digite uma palavra chave para buscar imagens para o ponto turístico
-          </label>
-          <div className="d-flex row">
-            <div class="input-group mb-3">
-              <input
-                onChange={(e) => setKeyword(e.target.value)}
-                name="keyword"
-                type="text"
-                class="form-control"
-                placeholder="Busque suas imagens..."
-                aria-label="Busque suas imagens..."
-                aria-describedby="button-addon2"
-              />
-              <button
-                class="btn btn-outline-primary"
-                type="submit"
-                id="button-addon2"
-              >
-                Buscar
-              </button>
+          <C.InputArea>
+            <C.BoxInput>
+              <label htmlFor="">Nome</label>
+              <C.Input />
+            </C.BoxInput>
+            <C.BoxInput>
+              <label htmlFor="">Cidade</label>
+              <C.Input />
+            </C.BoxInput>
+            <C.BoxInput>
+              <label htmlFor="">País</label>
+              <C.Input />
+            </C.BoxInput>
+            <C.BoxInput>
+              <label htmlFor="">Preço</label>
+              <C.Input />
+            </C.BoxInput>
+            <C.BoxInput className="full">
+              <label htmlFor="">Descrição</label>
+              <textarea />
+            </C.BoxInput>
+          </C.InputArea>
+          <C.InputSearchImg>
+            <label htmlFor="keyword">
+              Digite uma palavra chave para buscar imagens para o ponto
+              turístico
+            </label>
+            <div className="d-flex row">
+              <div class="input-group mb-3">
+                <input
+                  onChange={(e) => setKeyword(e.target.value)}
+                  name="keyword"
+                  id="keyword"
+                  type="text"
+                  // class="form-control"
+                  placeholder="Busque suas imagens..."
+                  aria-label="Busque suas imagens..."
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  class="btn btn-outline-primary"
+                  type="submit"
+                  id="button-addon2"
+                >
+                  Buscar
+                </button>
+              </div>
             </div>
-          </div>
+          </C.InputSearchImg>
         </Form>
         {imagesPexels.length > 0 && (
           <Result>
@@ -111,9 +139,7 @@ const Places = () => {
         )}
         {imagesSelected.length > 0 && (
           <Result>
-            <h2>
-              Essas são as imagens selecionadas para <span>{keyword}</span>
-            </h2>
+            <h2>Essas são as imagens selecionadas</h2>
           </Result>
         )}
 

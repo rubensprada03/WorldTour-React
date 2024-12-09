@@ -2,7 +2,7 @@ import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home.jsx";
 import Flights from "../pages/Flights.jsx";
-import Places from "../pages/admin/places.jsx";
+import Places from "../pages/admin/places/places.jsx";
 
 const Router = createBrowserRouter([
   {

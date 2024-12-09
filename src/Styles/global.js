@@ -12,6 +12,7 @@ export const Main = styled.section`
   align-items: center;
 
   margin-top: ${(props) => props.marginTop};
+  row-gap: 32px;
 `;
 
 export const ContentWrap = styled.div`

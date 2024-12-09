@@ -4,11 +4,27 @@ export const Carousel = styled.div`
   display: flex;
   max-width: 1440px;
   width: -webkit-fill-available;
-  height: 400px;
+  height: 180px;
+  margin-bottom: 10px;
   margin: 0 auto;
   position: relative;
   overflow-x: auto;
   /* overflow: hidden; */
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border-radius: 12px; /* Largura da barra */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent; /* Cor do fundo */
+    border-radius: 12px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #a9d6e5; /* Cor do polegar */
+    border-radius: 12px;
+  }
 `;
 
 export const Card = styled.div`
